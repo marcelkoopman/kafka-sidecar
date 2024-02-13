@@ -19,6 +19,8 @@ public class SidecarApp {
       var properties = new ConfigLoader().loadProducerProperties();
       var producer = factory.create(properties);
       LOG.info("Created producer {}", producer);
+      producer.flush();
+      producer.close();
       LOG.info("Sidecar stopped.");
    }
 }
