@@ -1,0 +1,10 @@
+package sidecar.adapter.kafka.produce;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+public class KafkaProducerFactory {
+    private static final Logger LOG = LoggerFactory.getLogger(KafkaProducerFactory.class);
+    public void create(Properties properties) {
+        LOG.info("Creating producer from properties");
+        var producer = new KafkaProducer<>(properties);
+    }
+}
