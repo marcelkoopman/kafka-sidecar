@@ -13,7 +13,7 @@ dependencies {
 }
 
 application {
-    mainClass = "sidecar.Main" 
+    mainClass = "sidecar.SidecarApp" 
 }
 
 tasks.named<Test>("test") {

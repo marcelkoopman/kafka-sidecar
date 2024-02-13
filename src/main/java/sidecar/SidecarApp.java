@@ -9,9 +9,9 @@ import org.slf4j.Logger;
 import sidecar.adapter.kafka.produce.KafkaProducerFactory;
 import sidecar.config.ConfigLoader;
 
-public class Main {
+public class SidecarApp {
    private static final Logger LOG 
-      = LoggerFactory.getLogger(Main.class);
+      = LoggerFactory.getLogger(SidecarApp.class);
 
    public static void main(String[] args) throws Exception{
       LOG.info("Sidecar started");
