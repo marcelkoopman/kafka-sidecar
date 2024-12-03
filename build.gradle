@@ -1,6 +1,5 @@
 plugins {
-    id 'se.patrikerdes.use-latest-versions' version '0.2.18'
-    id 'com.github.ben-manes.versions' version '0.51.0'
+    id "com.github.ben-manes.versions" version "$versionsVersion"
 }
 
 subprojects {
@@ -15,11 +14,4 @@ subprojects {
     repositories {
         mavenCentral()
     }
-}
-
-ext {
-    kafkaClientVersion = '3.9.0'
-    logBackVersion = '1.5.12'
-    sl4jVersion = '2.1.0-alpha1'
-    avroVersion = '1.12.0'
 }
