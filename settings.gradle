@@ -1,0 +1,15 @@
+// Configure plugin management
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+// Set the name of the root project
+rootProject.name = 'kafka-sidecar'
+
+// Include subprojects/modules
+include 'sidecar'
+include 'component-test'
+include 'open-api'
