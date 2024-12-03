@@ -7,6 +7,7 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 
 public class KafkaProducerFactory {
     private static final Logger LOG = LoggerFactory.getLogger(KafkaProducerFactory.class);
+    
     public KafkaProducer create(Properties properties) {
         LOG.info("Creating producer from properties");
         var producer = new KafkaProducer<>(properties);
