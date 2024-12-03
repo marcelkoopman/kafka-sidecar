@@ -5,33 +5,9 @@ plugins {
     id 'com.github.ben-manes.versions' version '0.51.0'
 }
 
-ext {
-    kafkaClientVersion = '3.9.0'
-    logBackVersion = '1.5.12'
-    sl4jVersion = '2.1.0-alpha1'
-    avroVersion = '1.12.0'
-}
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     implementation "org.apache.kafka:kafka-clients:$kafkaClientVersion"
     implementation "org.slf4j:slf4j-api:$sl4jVersion"
     implementation "ch.qos.logback:logback-classic:$logBackVersion"
     implementation "org.apache.avro:avro:$avroVersion"
-}
-
-application {
-    mainClassName = 'sidecar.SidecarApp' 
-}
-
-tasks.named('test') {
-    useJUnitPlatform()
-}
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
 }
